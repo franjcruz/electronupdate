@@ -1,0 +1,19 @@
+body {
+  overflow: hidden !important;
+}
+
+.buttonTouch {
+  width: 250px;
+  height: 195px;
+  font-size: 25px !important;
+  background-color: #42b379 !important;
+  border-color: #42b379 !important;
+}
+
+.section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

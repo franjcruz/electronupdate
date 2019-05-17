@@ -1,0 +1,54 @@
+{
+  "name": "kiosco-app",
+  "version": "0.0.1",
+  "description": "Kiosco App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:dev": "cross-env NODE_ENV='development' electron .",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "ship": "build -p always",
+    "dist": "build"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:80/"
+      }
+    ],
+    "appId": "com.kioscoapp.kryptotech",
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
+  },
+  "repository": "https://github.com/franjcruz/electronupdate",
+  "keywords": [
+    "Electron",
+    "kiosco"
+  ],
+  "author": {
+    "name": "Fran Cruz",
+    "email": "fran@kryptotech.io",
+    "url": "http://kryptotech.io/"
+  },
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^5.0.0",
+    "electron-builder": "^20.40.2",
+    "electron-updater": "^4.0.6",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "electron-log": "^3.0.5",
+    "electron-watch": "^1.0.9",
+    "is-online": "^8.2.0"
+  }
+}
